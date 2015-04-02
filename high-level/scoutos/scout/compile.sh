@@ -1,11 +1,15 @@
 #!/bin/bash
 
-cmake messages
-cmake motors
-cmake encoders
-cmake power
-cmake libscout
-cd libscout
+cd messages
+cmake .
+cd ../motors
+cmake .
+cd ../encoders
+cmake .
+cd ../power
+cmake .
+cd ../libscout
+cmake .
 python generate_behavior_lists.py
 cd ..
 cmake scoutsim
